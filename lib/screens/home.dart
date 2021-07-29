@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:ingapirca_app/screens/categories.dart';
 import 'package:ingapirca_app/screens/trending.dart';
+import 'package:ingapirca_app/util/caminos.dart';
 import 'package:ingapirca_app/util/categories.dart';
 import 'package:ingapirca_app/util/friends.dart';
 import 'package:ingapirca_app/util/lugares.dart';
@@ -129,9 +130,9 @@ class Home extends StatelessWidget {
         primary: false,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        itemCount: categories == null ? 0 : categories.length,
+        itemCount: caminos == null ? 0 : caminos.length,
         itemBuilder: (BuildContext context, int index) {
-          Map cat = categories[index];
+          Map cat = caminos[index];
 
           return CategoryItem(
             cat: cat,
