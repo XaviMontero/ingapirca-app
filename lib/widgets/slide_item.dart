@@ -6,12 +6,14 @@ class SlideItem extends StatefulWidget {
   final String img;
   final String title;
   final String short;
+  final String description;
 
   SlideItem({
     required Key key,
     required this.img,
     required this.title,
     required this.short,
+    required this.description,
   }) : super(key: key);
 
   @override
@@ -23,10 +25,15 @@ class _SlideItemState extends State<SlideItem> {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-        Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => DeatilLugar()),
-        );
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DeatilLugar(
+                      img: widget.img,
+                      title: widget.title,
+                      description: widget.description,
+                    )),
+          );
         },
         child: item());
   }

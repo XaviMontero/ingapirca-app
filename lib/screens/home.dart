@@ -22,18 +22,14 @@ class Home extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             SizedBox(height: 20.0),
-            buildRestaurantRow('Tesis Wily', context),
+            buildRestaurantRow('Museo', context),
             SizedBox(height: 10.0),
             buildRestaurantList(context),
             SizedBox(height: 10.0),
-            buildCategoryRow('Category', context),
+            buildCategoryRow('Camino del Inca (Qhapaq Ñan)', context),
             SizedBox(height: 10.0),
             buildCategoryList(context),
             SizedBox(height: 20.0),
-            buildCategoryRow('Friends', context),
-            SizedBox(height: 10.0),
-            buildFriendsList(),
-            SizedBox(height: 30.0),
           ],
         ),
       ),
@@ -161,6 +157,7 @@ class Home extends StatelessWidget {
               img: lugar["img"],
               title: lugar["title"],
               short: lugar["short"],
+              description: lugar["description"],
             ),
           );
         },

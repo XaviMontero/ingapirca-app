@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ingapirca_app/widgets/detail_lugar.dart';
 
 class CategoryItem extends StatelessWidget {
   final Map cat;
@@ -7,7 +8,23 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DeatilLugar(
+                      img: cat['img'],
+                      title: cat['name'],
+                      description: cat['description'],
+                    )),
+          );
+        },
+        child: _camino(context));
+  }
+
+  Widget _camino(context) {
+        return Padding(
       padding: const EdgeInsets.only(right: 10.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
