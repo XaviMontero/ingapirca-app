@@ -11,7 +11,7 @@ import 'package:ingapirca_app/util/restaurants.dart';
 import 'package:ingapirca_app/widgets/category_item.dart';
 import 'package:ingapirca_app/widgets/search_card.dart';
 import 'package:ingapirca_app/widgets/slide_item.dart';
-
+import 'package:qrscan/qrscan.dart' as scanner;
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
         ),
         FlatButton(
           child: Text(
-            "See all (9)",
+            "",
             style: TextStyle(
               color: Theme.of(context).accentColor,
             ),
@@ -82,7 +82,7 @@ class Home extends StatelessWidget {
         ),
         FlatButton(
           child: Text(
-            "See all (9)",
+            "",
             style: TextStyle(
               color: Theme.of(context).accentColor,
             ),

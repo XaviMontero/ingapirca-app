@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ingapirca_app/screens/home.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
 
 class MainScreen extends StatefulWidget {
   @override
@@ -51,9 +53,17 @@ class _MainScreenState extends State<MainScreen> {
         child: Icon(
           Icons.camera,
         ),
-        onPressed: () => _pageController.jumpToPage(2),
+        onPressed: () => {_scannerEvent()},
       ),
     );
+  }
+
+  _scannerEvent() {
+    Permission.camera.request().then((dato) => dato.isGranted
+        ? scanner.scan().then((valor) {
+            print(valor);
+          })
+        : print('no tiene datos'));
   }
 
   void navigationTapped(int page) {
