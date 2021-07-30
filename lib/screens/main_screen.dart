@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ingapirca_app/screens/home.dart';
+import 'package:ingapirca_app/util/lugares.dart';
+import 'package:ingapirca_app/widgets/detail_lugar.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 
@@ -61,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
   _scannerEvent() {
     Permission.camera.request().then((dato) => dato.isGranted
         ? scanner.scan().then((valor) {
-            print(valor);
+            _goToPage(valor);
           })
         : print('no tiene datos'));
   }
@@ -109,6 +111,28 @@ class _MainScreenState extends State<MainScreen> {
             : Theme.of(context).textTheme.caption!.color,
         onPressed: () => _pageController.jumpToPage(index),
       );
+    }
+  }
+
+  void _goToPage(String? valor) {
+    var estado = false;
+    lugares.forEach((element) {
+      if (element['img'].toString().endsWith(valor.toString())) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DeatilLugar(
+                    img: element['img'],
+                    title: element['title'],
+                    description: element['description'],
+                  )),
+        );
+        estado = true;
+      }
+    });
+
+    if (!estado) {
+      print('Hola error');
     }
   }
 }
