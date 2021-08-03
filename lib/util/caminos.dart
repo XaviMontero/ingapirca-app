@@ -43,4 +43,12 @@ List caminos = [
     "img": "assets/7.JPG",
     "description": "Continuando por el Puyal, a 5 Km. de Paredones se encuentra Wuasipamba (3.600 m.s.n.m.) que estaba dotado de tres habitaciones pequeñas, cuya función era la de chaskiwasi. Aquí se albergaban los hombres correos o chaskis que facilitaban la comunicación en todo el imperio Inca."
   },
+   {
+    "name": "PARROQUIA DE INGAPIRCA",
+    "color1": Color.fromARGB(100, 0, 0, 0),
+    "color2": Color.fromARGB(100, 0, 0, 0),
+    "img": "assets/7.JPG",
+    "description":
+        " \nIngapirca es una floreciente parroquia de la Sierra Sur del Ecuador, con 240 Km2 y una población aproximada de 14.000 habitantes, de los cuales 2000 se hallan en el centro urbano (3.180 m.s.n.m) y los otros distribuidos en las comunidades indígenas o dispersos en el campo. El nombre lo toma del conjunto arqueológico monumental que todavía subsiste como una de las evidencias más importantes de la Historia Aborigen de los pueblos Cañari e Inca. Esta zona al igual que toda el área meridional del Ecuador (Provincias de Cañar, Azuay y Loja) se caracteriza por una variedad de suelos de areniscas cuarcíferas, rocas porfídicas y dioríticas, y conglomerados volcánicos que no llegaron a la formación de tobas de cangagua como ocurrió en el Norte.\n  \n La Provincia del Cañar ocupa un altiplano conformado por los contrafuertes meridionales del Nudo del Azuay, accidente geográfico e orográfico que marca una frontera o división entre dos regiones diferentes: la del Norte con tierras propias de un volcanismo moderno, y las del Sur con tierras procedentes de una volcanismo antigua. Geográficamente la delimitan por el Norte aquel Nudo del Azuay, por el Este y Sur los páramos de Curiquinga y Buerán, y por le Oeste la cordillera Occidental. El drenaje de su Hidrografía está fundamentalmente dado por los ríos Cañar que recoge las aguas de sus pequeños afluentes Huayrapungo y Silante; y el Pircay, llamado después Bulubulu y cuando llega al Pacífico, Taura.\n "
+  },
 ];

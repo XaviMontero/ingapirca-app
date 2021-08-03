@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ingapirca_app/screens/categories.dart';
 import 'package:ingapirca_app/screens/home.dart';
+import 'package:ingapirca_app/util/caminos.dart';
 import 'package:ingapirca_app/util/lugares.dart';
+import 'package:ingapirca_app/widgets/category_item.dart';
 import 'package:ingapirca_app/widgets/detail_lugar.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
@@ -13,7 +16,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   late PageController _pageController;
   int _page = 0;
-
+  int index = 0;
   List icons = [
     Icons.home,
     Icons.label,
@@ -29,7 +32,17 @@ class _MainScreenState extends State<MainScreen> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: List.generate(5, (index) => Home()),
+        children: [
+          Home(),
+          DeatilLugar(
+            img: _getpage('PARROQUIA DE INGAPIRCA')['img'],
+            description: _getpage('PARROQUIA DE INGAPIRCA')['description'],
+            title: _getpage('PARROQUIA DE INGAPIRCA')['name'],
+          ),
+          Home(),
+          Home(),
+          Categories()
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
@@ -133,6 +146,14 @@ class _MainScreenState extends State<MainScreen> {
 
     if (!estado) {
       print('Hola error');
+    }
+  }
+
+  _getpage(String s) {
+    switch (s) {
+      case 'PARROQUIA DE INGAPIRCA':
+        return caminos[6];
+        break;
     }
   }
 }
