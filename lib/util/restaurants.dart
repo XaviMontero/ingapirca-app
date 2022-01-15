@@ -1,7 +1,7 @@
 List restaurants = [
   {
-    "img": "assets/food1.jpeg",
-    "title": "Happy Jones",
+    "img": "assets/chivil.png",
+    "title": "Chivil",
     "address": "1278 Loving Acres RoadKansas City, MO 64110",
     "rating": "4.5"
   },

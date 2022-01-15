@@ -19,10 +19,10 @@ class _MainScreenState extends State<MainScreen> {
   int index = 0;
   List icons = [
     Icons.home,
-    Icons.label,
+    Icons.history,
     Icons.camera,
-    Icons.notifications,
-    Icons.person,
+    Icons.star,
+    Icons.restaurant_sharp,
   ];
 
   @override

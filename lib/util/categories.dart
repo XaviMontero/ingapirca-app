@@ -2,33 +2,33 @@ import 'package:flutter/material.dart';
 
 List categories = [
   {
-    "name": "Italian",
+    "name": "Chivil",
     "color1": Color.fromARGB(100, 0, 0, 0),
     "color2": Color.fromARGB(100, 0, 0, 0),
-    "img": "assets/food1.jpeg"
+    "img": "assets/chivil.png"
   },
   {
-    "name": "Chinese",
+    "name": "Cuy",
     "color1": Color.fromARGB(100, 0, 0, 0),
     "color2": Color.fromARGB(100, 0, 0, 0),
-    "img": "assets/food2.jpeg"
+    "img": "assets/cuy.jpg"
   },
   {
-    "name": "Nigerian",
+    "name": "Chacho",
     "color1": Color.fromARGB(100, 0, 0, 0),
     "color2": Color.fromARGB(100, 0, 0, 0),
-    "img": "assets/food3.jpeg"
+    "img": "assets/ping.jpg"
   },
   {
-    "name": "Spanish",
+    "name": "Chicha",
     "color1": Color.fromARGB(100, 0, 0, 0),
     "color2": Color.fromARGB(100, 0, 0, 0),
-    "img": "assets/food4.jpeg"
+    "img": "assets/chicha.jpg"
   },
   {
-    "name": "Mexican",
+    "name": "Mote Sucio",
     "color1": Color.fromARGB(100, 0, 0, 0),
     "color2": Color.fromARGB(100, 0, 0, 0),
-    "img": "assets/food5.jpeg"
+    "img": "assets/mote-sucio.jpg"
   },
 ];

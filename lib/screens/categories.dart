@@ -13,7 +13,7 @@ class _CategoriesState extends State<Categories> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Text('Categories'),
+        title: Text(''),
         centerTitle: true,
       ),
       body: Padding(
