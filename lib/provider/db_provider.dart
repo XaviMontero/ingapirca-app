@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:ingapirca_app/model/user.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
@@ -18,7 +19,7 @@ class DBProvider {
 
   initDB() async {
     Directory documentDirecotry = await getApplicationDocumentsDirectory();
-    String path = join(documentDirecotry.path, 'Ucacue4.db');
+    String path = join(documentDirecotry.path, 'ups.db');
     return await openDatabase(path, version: 214, onOpen: (db) {},
         onCreate: (Database db, int version) async {
       await db.execute('CREATE TABLE user ('
@@ -33,6 +34,17 @@ class DBProvider {
           ');');
     });
   }
+  
+  
+      Future<List<User>> getAllUser() async {
+    final db = await database;
+    final resp = await db.query('user');
+    List<User> recupera =
+        resp.isNotEmpty ? resp.map((c) => User.fromJson(c)).toList() : [];
+    return recupera;
+  }
+  
+  
 /* 
   nuevoProducto(Producto producto) async {
     final db = await database;
@@ -40,13 +52,7 @@ class DBProvider {
     return res;
   } 
 
-    Future<List<Producto>> getAllProducto() async {
-    final db = await database;
-    final resp = await db.query('producto');
-    List<Producto> recupera =
-        resp.isNotEmpty ? resp.map((c) => Producto.fromJson(c)).toList() : [];
-    return recupera;
-  }
+
 
 
 

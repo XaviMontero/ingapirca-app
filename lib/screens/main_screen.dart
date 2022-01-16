@@ -3,7 +3,6 @@ import 'package:ingapirca_app/screens/categories.dart';
 import 'package:ingapirca_app/screens/home.dart';
 import 'package:ingapirca_app/util/caminos.dart';
 import 'package:ingapirca_app/util/lugares.dart';
-import 'package:ingapirca_app/widgets/category_item.dart';
 import 'package:ingapirca_app/widgets/detail_lugar.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
