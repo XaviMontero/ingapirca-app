@@ -43,7 +43,11 @@ class DBProvider {
         resp.isNotEmpty ? resp.map((c) => User.fromJson(c)).toList() : [];
     return recupera;
   }
-  
+    newUser(User user) async {
+    final db = await database;
+    final res = await db.insert('user', user.toJson());
+    return res;
+  } 
   
 /* 
   nuevoProducto(Producto producto) async {
@@ -56,11 +60,7 @@ class DBProvider {
 
 
 
-  nuevaVenta(Venta venta) async {
-    final db = await database;
-    final res = await db.insert('venta', venta.toJson());
-    return res;
-  } 
+
 
     Future<List<Venta>> getAllVenta() async {
     final db = await database;

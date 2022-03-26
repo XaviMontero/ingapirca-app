@@ -27,6 +27,8 @@ class _MyAppState extends State<MyApp> {
         builder: (BuildContext context, AsyncSnapshot<List<User>> snapshot) {
           assert(context != null);
           if (snapshot.hasData) {
+            String? name = snapshot.data![0].id;
+            print(name);
             return snapshot.data!.isEmpty ? Seting() : MainScreen();
           }
           return Container(child: Center(child: CircularProgressIndicator()));
